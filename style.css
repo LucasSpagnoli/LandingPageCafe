@@ -1,0 +1,785 @@
+/* Fontes */
+@import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+body {
+    background-color: rgb(27, 27, 27);
+}
+
+.pinyon-script-regular {
+    font-family: "Pinyon Script", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+.montserrat {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.playfair-display {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: default;
+}
+
+a {
+    cursor: pointer;
+}
+
+/* Header */
+.header {
+    background-image: url('imgs/bg-header.png');
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar-titulo {
+    color: white;
+    position: absolute;
+    left: 48.5%;
+    margin-top: 0.7vw;
+    font-size: 3.8vw;
+    font-family: "Pinyon Script";
+    transform: translate(-47%, 0%);
+    cursor: pointer;
+}
+
+/* Links menu */
+.navbar-menus {
+    margin: 2.7vw 3.5vw 0 0;
+}
+
+.menu-item {
+    margin-left: 3.5vw;
+    margin-right: 2vw;
+    text-decoration: none;
+    color: white;
+    font-family: 'Montserrat';
+    font-size: 1.25vw;
+    position: relative;
+}
+
+.menu-item::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 1px;
+    bottom: -1px;
+    left: 0;
+    background-color: white;
+    transition: width 0.3s ease;
+}
+
+.menu-item:hover::after {
+    width: 100%;
+}
+
+/* Texto */
+.header-sabor {
+    color: white;
+    font-family: 'Playfair Display';
+    font-size: 5.5vw;
+    position: absolute;
+    top: 34%;
+    left: 24vw;
+    transform: (-50%, -50%);
+}
+
+.header-inesquecivel {
+    color: transparent;
+    font-family: 'Playfair Display';
+    -webkit-text-stroke: 1px white;
+    font-size: 4.8vw;
+    position: absolute;
+    top: 48%;
+    left: 7vw;
+    transform: (-50%, -50%);
+}
+
+.header-texto {
+    position: absolute;
+    color: white;
+    top: 44%;
+    left: 55%;
+    font-size: 1.4vw;
+    font-family: 'Montserrat';
+}
+
+/* botão */
+.header-btn {
+    position: absolute;
+    top: 80%;
+    left: 44%;
+    background-color: none;
+    color: white;
+    text-decoration: none;
+    font-family: 'Montserrat';
+    font-size: 1.7vw;
+    padding: 0.4vw 1vw;
+    border-color: white;
+    border-style: solid;
+    border-width: 0.1vw;
+}
+
+.header-btn:hover {
+    background: linear-gradient(160deg, rgb(164, 115, 0), rgb(255, 194, 51), rgb(164, 115, 0));
+    text-shadow: -1px 1px 5px rgba(0, 0, 0, 0.367);
+    border-color: black;
+    text-shadow: -1px 1px 5px rgba(0, 0, 0, 0.367);
+    border-width: 0.1vw;
+    transition: all 0.15s;
+}
+
+/* linha vertical ligando header com section */
+.linha-vertical {
+    width: 2px;
+    height: 8vw;
+    top: 92vh;
+    left: 49.2%;
+    position: absolute;
+    background-color: white;
+}
+
+
+/* Main */
+main {
+    background-color: rgb(27, 27, 27);
+    color: white;
+}
+
+section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Texto */
+.section-texto-cafe {
+    font-family: 'Playfair Display';
+    text-align: justify;
+    font-size: 1.4vw;
+    z-index: 1;
+    position: relative;
+    top: 7vw;
+    left: -1%;
+    animation: fadeUp 1s ease-out;
+}
+
+.section-texto-cafe strong {
+    font-size: 1.45vw;
+}
+
+/* Imagem do grão */
+.grao-img {
+    position: absolute;
+    z-index: 0;
+    top: 2vw;
+    width: 25vw;
+    animation: float 4.5s ease-in-out infinite;
+}
+
+/* Linhas detalhes no texto */
+.linha-detalhe-vertical {
+    top: 25.5vw;
+    position: absolute;
+    width: 1px;
+    height: 8vw;
+    left: 29.3vw;
+    background-color: gray;
+    margin-right: 1vw;
+    animation: fadeHeight 1s ease;
+}
+
+.linha-detalhe-horizontal {
+    top: 36.3vw;
+    left: 60vw;
+    position: absolute;
+    width: 8vw;
+    height: 1.6px;
+    background-color: gray;
+    animation: fadeWidth 1s ease;
+}
+
+.cafe-decorativo {
+    width: 100%;
+    height: 60vh;
+    margin: -2rem 0 4rem 0;
+}
+
+/* Produtos */
+.produtos-titulo {
+    font-family: "Pinyon Script";
+    font-size: 4vw;
+    padding: 2vw 0 0 4vw;
+}
+
+.section-produtos {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 6vw;
+    margin-top: -2rem;
+    height: 100vh;
+}
+
+.linha-horizontal-decorativa {
+    height: 1px;
+    width: 100vw;
+    position: absolute;
+    background-color: gray;
+    left: -1%;
+    margin-top: 2rem;
+}
+
+/* Café moca */
+.moca {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+    border-radius: 1.3rem;
+    background-color: black;
+    width: 17vw;
+    height: 25vw;
+    box-shadow: -6px 10px 10px rgba(0, 0, 0, 0.46);
+    justify-content: center;
+    padding-top: 0.5vw;
+    cursor: pointer;
+    transition: all 0.2s ease-out;
+
+}
+
+.cafe-moca {
+    position: relative;
+    width: 13vw;
+    z-index: 3;
+    cursor: pointer;
+    transition: all 0.2s ease-out;
+}
+
+.texto-moca {
+    position: relative;
+    font-size: 1.95vw;
+    font-family: 'Pinyon Script';
+    color: rgb(255, 179, 0);
+    padding-top: 1vw;
+    z-index: 3;
+    transition: all 0.2s ease-out;
+}
+
+.brilho-moca {
+    position: absolute;
+    width: 8.3vw;
+    height: 8.3vw;
+    top: 36%;
+    left: 4vw;
+    box-shadow: 0 0 4rem rgb(255, 179, 0);
+    z-index: 2;
+    border-radius: 100%;
+    transition: all 0.2s ease-out;
+}
+
+.moca:hover {
+    border-radius: 0.8rem;
+    background: linear-gradient(160deg, rgb(164, 115, 0), rgb(255, 194, 51), rgb(164, 115, 0));
+    width: 18vw;
+    height: 26vw;
+    margin-right: -1vw;
+    box-shadow: -14px 20px 6px rgb(0, 0, 0);
+
+    .cafe-moca {
+        width: 14vw;
+        transition: all 0.2s ease-out;
+    }
+
+    .texto-moca {
+        font-size: 2.1vw;
+        color: black;
+        transition: all 0.2s ease-out;
+        padding-top: 0.5vw;
+    }
+
+    transition: all 0.2s ease-out;
+}
+
+/* Café premium */
+.premium {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1.5rem;
+    background-color: black;
+    width: 19vw;
+    height: 28vw;
+    box-shadow: 0 12px 10px rgba(0, 0, 0, 0.46);
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    padding-top: 0.5vw;
+    cursor: pointer;
+    transition: all 0.2s ease-out;
+}
+
+.cafe-premium {
+    width: 15vw;
+    position: relative;
+    z-index: 3;
+    cursor: pointer;
+    transition: all 0.2s ease-out;
+}
+
+.texto-premium {
+    font-size: 2.25vw;
+    font-family: 'Pinyon Script';
+    color: rgb(255, 179, 0);
+    padding-top: 1.3vw;
+    position: relative;
+    z-index: 3;
+    transition: all 0.2s ease-out;
+}
+
+.brilho-premium {
+    position: absolute;
+    width: 9.5vw;
+    height: 8.3vw;
+    top: 35%;
+    left: 4.4vw;
+    box-shadow: 0 0 4.5rem rgb(255, 179, 0);
+    border-radius: 100%;
+    z-index: 2;
+    transition: all 0.2s ease-out;
+}
+
+.premium:hover {
+    border-radius: 0.8rem;
+    background: linear-gradient(160deg, rgb(164, 115, 0), rgb(255, 194, 51), rgb(164, 115, 0));
+    width: 20vw;
+    height: 29vw;
+    box-shadow: 0 24px 6px rgb(0, 0, 0);
+
+    .cafe-premium {
+        width: 16vw;
+        transition: all 0.2s ease-out;
+    }
+
+    .texto-premium {
+        font-size: 2.4vw;
+        color: black;
+        transition: all 0.2s ease-out;
+        padding-top: 0.8vw;
+    }
+
+    transition: all 0.2s ease-out;
+}
+
+/* Café ristretto */
+.ristretto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+    justify-content: center;
+    border-radius: 1.5rem;
+    background-color: black;
+    width: 13vw;
+    height: 19vw;
+    box-shadow: 5px 6px 10px rgba(0, 0, 0, 0.46);
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    padding-top: 0.5vw;
+    cursor: pointer;
+    transition: all 0.2s ease-out;
+}
+
+.cafe-ristretto {
+    width: 11vw;
+    position: relative;
+    z-index: 3;
+    cursor: pointer;
+    transition: all 0.2s ease-out;
+}
+
+.texto-ristretto {
+    font-size: 2vw;
+    font-family: 'Pinyon Script';
+    color: rgb(255, 179, 0);
+    padding-top: 0.5vw;
+    position: relative;
+    z-index: 3;
+    transition: all 0.2s ease-out;
+}
+
+.brilho-ristretto {
+    position: absolute;
+    width: 7.8vw;
+    height: 6vw;
+    top: 36%;
+    left: 2.4vw;
+    box-shadow: 0 0 3rem rgb(255, 179, 0);
+    z-index: 0;
+    border-radius: 100%;
+    z-index: 2;
+    transition: all 0.2s ease-out;
+}
+
+.ristretto:hover {
+    border-radius: 0.8rem;
+    background: linear-gradient(160deg, rgb(164, 115, 0), rgb(255, 194, 51), rgb(164, 115, 0));
+    width: 14vw;
+    height: 20vw;
+    box-shadow: 10px 12px 6px rgb(0, 0, 0);
+    margin-left: -1vw;
+
+    .cafe-ristretto {
+        width: 12vw;
+        transition: all 0.2s ease-out;
+    }
+
+    .texto-premium {
+        font-size: 2.1vw;
+        color: black;
+        transition: all 0.2s ease-out;
+        padding-top: 0.3vw;
+    }
+
+    transition: all 0.2s ease-out;
+}
+
+/* Botão "ver mais" */
+.cafe-btn {
+    position: absolute;
+    z-index: 5;
+    top: 93%;
+    left: 46.3vw;
+    background-color: none;
+    color: white;
+    text-decoration: none;
+    font-family: 'Montserrat';
+    font-size: 1.7vw;
+    padding: 0.4vw 1vw;
+    border-color: white;
+    border-style: solid;
+    border-width: 0.1vw;
+    margin: 0 0 4vw 0;
+}
+
+.cafe-btn:hover {
+    background: linear-gradient(160deg, rgb(164, 115, 0), rgb(255, 194, 51), rgb(164, 115, 0));
+    top: 92.7%;
+    text-shadow: -1px 1px 5px rgba(0, 0, 0, 0.367);
+    border-color: black;
+    border-width: 0.1vw;
+    transition: all 0.15s;
+}
+
+/* Avaliações */
+.avaliacao-titulo {
+    font-family: "Pinyon Script";
+    font-size: 4vw;
+    padding: 2vw 0 0 4vw;
+    margin-top: 4vw;
+}
+
+.avaliacoes {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0 3vw 0 5vw;
+}
+
+/* Avaliação maior */
+.avaliacao-grande {
+    height: 85vh;
+    width: 38vw;
+    border-radius: 1rem;
+    box-shadow: -6px 6px 10px black;
+    background: rgb(147, 103, 0);
+}
+
+.avaliacao-img-grande {
+    border-radius: 8px 8px 0 0;
+    width: 100%;
+}
+
+.avaliacao-texto-grande {
+    padding: 2vw 3vw 0 3vw;
+    font-size: 1.5vw;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* Avaliações menores */
+.avaliacao-img-pequena {
+    width: 18vh;
+    border-radius: 8px 0 0 8px;
+}
+
+.avaliacoes-pequenas {
+    height: 85vh;
+    width: 45vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.avaliacao-pequena {
+    background: rgb(147, 103, 0);
+    height: 18vh;
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 4px 4px 10px black;
+    display: flex;
+    align-items: center;
+}
+
+.avaliacao-texto-pequeno {
+    padding: 0 2vw;
+    font-size: 1.3vw;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* Footer */
+/* Email para promoções */
+.teste-gratis {
+    height: 8.5vw;
+    width: 60vw;
+    margin: 4vw auto 6vw auto;
+    left: 10%;
+    background: linear-gradient(160deg, rgb(164, 115, 0), rgb(255, 194, 51), rgb(164, 115, 0));
+    display: flex;
+    justify-content: space-between;
+    border-radius: 2vw;
+    box-shadow: -2px 2px 4px rgba(0, 0, 0, 0.39);
+}
+.teste-texto {
+    color: white;
+    font-family: "Montserrat";
+    margin: 1.5vw 0 0 4vw;
+    font-size: 1.3vw;
+    text-shadow: -1px 1px 5px rgba(0, 0, 0, 0.207);
+}
+.teste-texto strong {
+    font-size: 1.7vw;
+    font-family: 'Courier New', Courier, monospace;
+}
+.teste-email {
+    margin: 2.7vw 5vw 0 0;
+    border-radius: 6px;
+    padding-left: 1vw;
+    height: 2.5vw;
+    width: 20vw;
+    font-size: 1.4vw;
+    font-family: "Playfair Display";
+    cursor: text;
+    border: none;
+    box-shadow: -1px 1px 4px rgba(0, 0, 0, 0.251);
+}
+.teste-email:focus {
+    background-color: rgb(255, 242, 209);
+    box-shadow: -5px 5px 3px black;
+    transition: all 0.4s ease;
+}
+
+.footer {
+    background-color: rgb(4, 4, 4);
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Parte superior do footer */
+.footer-cima {
+    margin-top: 5vh;
+    width: 100%;
+    height: 25vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-img {
+    width: 8vw;
+    height: 8vw;
+    margin: 3vw 0 0 3vw;
+}
+
+/* Links footer */
+.footer-itens {
+    display: flex;
+    margin: 4vw 3vw 0 0;
+}
+
+.footer-link {
+    color: white;
+    font-family: "Montserrat";
+    font-size: 1.4vw;
+    height: 1vw;
+    margin: 0 4vw 0 1vw;
+    text-decoration: none;
+    transition: all 0.1s ease;
+}
+
+.footer-link:hover {
+    color: #dc934f;
+    transition: all 0.1s ease;
+}
+
+/* Linha divisória */
+.footer-linha {
+    height: 1px;
+    background-color: lightgray;
+    width: 80vw;
+    margin: 4vw auto;
+}
+
+/* Parte inferior do footer */
+.footer-baixo {
+    width: 100%;
+    height: 25vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Redes sociais */
+.footer-sociais {
+    display: flex;
+    margin-left: 3vw;
+}
+
+.footer-social {
+    height: 3.5vw;
+    width: 3.5vw;
+    border-radius: 100%;
+    background-color: gray;
+    margin-right: 2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.footer-social:hover {
+    background: linear-gradient(160deg, rgb(164, 115, 0), rgb(255, 194, 51), rgb(164, 115, 0));
+}
+
+.footer-img-face {
+    height: 2vw;
+    width: 2vw;
+    cursor: pointer;
+}
+
+.footer-img-insta {
+    height: 1.7vw;
+    width: 1.7vw;
+    cursor: pointer;
+}
+
+.footer-img-ttk {
+    height: 2vw;
+    width: 2vw;
+    cursor: pointer;
+}
+
+.footer-img-face:hover {
+    transform: scale(0.9);
+    transition: all 0.1s ease;
+}
+
+.footer-img-insta:hover {
+    transform: scale(0.9);
+    transition: all 0.1s ease;
+}
+
+.footer-img-ttk:hover {
+    transform: scale(0.9);
+    transition: all 0.1s ease;
+}
+
+/* Texto */
+.footer-baixo p {
+    font-size: 1.4vw;
+    margin-right: 5vw;
+    padding-top: 0.7vw;
+    color: white;
+    font-family: "Montserrat";
+}
+
+.footer-baixo a {
+    text-decoration: none;
+    color: white;
+}
+
+.footer-baixo strong {
+    cursor: pointer;
+}
+
+/* Animações */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(1.5vw);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeWidth {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 8vw;
+    }
+}
+
+@keyframes fadeHeight {
+    from {
+        height: 0;
+    }
+
+    to {
+        height: 8vw;
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(-0.5vw);
+    }
+
+    50% {
+        transform: translateY(0.5vw);
+    }
+
+    100% {
+        transform: translateY(-0.5vw);
+    }
+}
